@@ -21,6 +21,17 @@ yarn add -D @myriaddreamin/vite-plugin-typst
 yarn add -D @myriaddreamin/typst-ts-node-compiler
 ```
 
+To run the website on localhost:
+```bash
+npm run dev
+```
+Notes
+* dev is set in package.json to use --host flag
+	* --host flag makes machines beyond localhost work
+	* e.g http://0.0.0.0:5173 becomes valid
+	* exposing vite like this an attack surface and is vulnerable
+	* this is not suitable for production(cf nginx, apache) 
+
 In order to skip tls/ssl setup for https, consider tunnelmole
 ```bash
 npm install -g tunnelmole
